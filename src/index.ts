@@ -3,7 +3,6 @@ import { ApolloServer, BaseContext } from "@apollo/server";
 import fastifyApollo, {
   fastifyApolloDrainPlugin,
 } from "@as-integrations/fastify";
-// ...
 
 const fastify = Fastify();
 
