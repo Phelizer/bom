@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "Oleksandr Chornyi <chornyi.oleksandr@lll.kpi.ua>",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/server": "^4.9.5",
+    "@as-integrations/fastify": "^2.1.1",
+    "fastify": "^4.24.3",
+    "graphql": "^16.8.1",
+    "typescript": "^5.3.2"
+  }
+}
