@@ -13,7 +13,7 @@ const mockedProducts = [
   },
   {
     id: "3",
-    type: "GPS Receiver",
+    type: "GPS Transmitter",
     brand: "Hub & Son",
     model: "One",
   },
@@ -21,7 +21,7 @@ const mockedProducts = [
 
 export const resolvers = {
   Query: {
-    products() {
+    async products() {
       return mockedProducts;
     },
   },
