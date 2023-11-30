@@ -19,10 +19,17 @@ const mockedProducts = [
   },
 ];
 
+interface ProductsOfTypeArgs {
+  type: string;
+}
+
 export const resolvers = {
   Query: {
     async products() {
       return mockedProducts;
+    },
+    async productsOfType(_: unknown, args: ProductsOfTypeArgs) {
+      return mockedProducts.filter((p) => p.type === args.type);
     },
   },
 };

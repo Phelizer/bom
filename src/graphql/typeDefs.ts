@@ -8,5 +8,6 @@ export const typeDefs = `#graphql
 
   type Query {
     products: [Product!]
+    productsOfType(type: String): [Product!]
   }
 `;
