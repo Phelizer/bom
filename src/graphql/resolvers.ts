@@ -23,8 +23,9 @@ const mockedProducts = [
   },
 ];
 
-interface ProductsOfTypeArgs {
-  type: string;
+interface ProductsByArgs {
+  fieldName: string;
+  fieldValue: string;
 }
 
 const isTypeOf = (type: string) => (obj: unknown) => {
@@ -42,8 +43,11 @@ export const resolvers = {
     async products() {
       return mockedProducts;
     },
-    async productsOfType(_: unknown, args: ProductsOfTypeArgs) {
-      return mockedProducts.filter((p) => p.type === args.type);
+    async productsBy(_: unknown, args: ProductsByArgs) {
+      return mockedProducts.filter(
+        (p: Record<PropertyKey, unknown>) =>
+          p[args.fieldName] === args.fieldValue
+      );
     },
   },
 };

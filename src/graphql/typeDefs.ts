@@ -32,6 +32,6 @@ export const typeDefs = `#graphql
 
   type Query {
     products: [Product!]
-    productsOfType(type: ProductType): [Product!]
+    productsBy(fieldName: String, fieldValue: String): [Product!]
   }
 `;
